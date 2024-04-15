@@ -1,11 +1,18 @@
-import './App.css'
+import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { Routes, Route } from "react-router-dom";
+import PlayPage from "./pages/PlayPage";
+import HomePage from "./pages/HomePage";
+import MoviePage from "./pages/MoviePage";
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold text-center underline">Hello</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/movie/:id" element={<MoviePage />} />
+      <Route path="/plays" element={<PlayPage />} />
+    </Routes>
   );
 }
 
